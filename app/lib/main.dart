@@ -16,21 +16,27 @@ class _MyappState extends State<Myapp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Validade App')),
-        body: Row (
-          mainAxisAlignment: MainAxisAlignment.spaceAround, 
-        children: [
-          Center(
-            child:Text('My app' , 
-            style: TextStyle(fontSize: 34),),
-          ),
-          Center(
-            child:Text('My app' , 
-            style: TextStyle(fontSize: 34),),
-          ),
-          ]
+        appBar: AppBar(title: Text('Stack App'),),
+        body: Stack(
+          
+          children: [
+            Container(
+              width: 400,
+              height: 400,
+              color: Colors.blue,
+            ),
+            Positioned(
+              bottom: 75,
+              left: 75,
+              child: Container(
+                width: 150,
+                height: 150,
+                color: Colors.red,
+              ),
+ 
+            )
+          ],
         ),
-        
       ),
     );
   }
